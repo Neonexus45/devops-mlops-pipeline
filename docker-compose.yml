@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    container_name: devops-pipeline
+    command: pytest tests/ -v --cov=src --cov-report=term-missing
+
+  lint:
+    build: .
+    container_name: devops-lint
+    command: sh -c "black --check src/ tests/ && flake8 src/ tests/ --max-line-length=120"
+
+  benchmark:
+    build: .
+    container_name: devops-benchmark
+    command: pytest tests/test_performance.py -v
