@@ -1,7 +1,6 @@
 """Tests de performance — bloquent le merge si les seuils sont dépassés."""
 
 import time
-import pytest
 from src.algorithms import (
     fibonacci,
     fibonacci_recursive,
