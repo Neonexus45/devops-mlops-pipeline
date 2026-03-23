@@ -18,9 +18,9 @@ class TestPerformance:
         start = time.perf_counter()
         result = func(*args)
         elapsed_ms = (time.perf_counter() - start) * 1000
-        assert elapsed_ms < max_ms, (
-            f"{func.__name__} took {elapsed_ms:.1f}ms, max allowed: {max_ms}ms"
-        )
+        assert (
+            elapsed_ms < max_ms
+        ), f"{func.__name__} took {elapsed_ms:.1f}ms, max allowed: {max_ms}ms"
         return result
 
     def test_fibonacci_30_under_1ms(self):
@@ -34,6 +34,7 @@ class TestPerformance:
 
     def test_merge_sort_10k_under_100ms(self):
         import random
+
         arr = random.sample(range(100_000), 10_000)
         self._timed(merge_sort, arr, max_ms=100)
 
@@ -42,6 +43,7 @@ class TestPerformance:
 
     def test_matrix_multiply_50x50_under_200ms(self):
         import random
+
         size = 50
         a = [[random.random() for _ in range(size)] for _ in range(size)]
         b = [[random.random() for _ in range(size)] for _ in range(size)]

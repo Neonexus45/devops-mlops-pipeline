@@ -12,8 +12,8 @@ from src.algorithms import (
     matrix_multiply,
 )
 
-
 # ─── Fibonacci ───────────────────────────────────────────────────────
+
 
 class TestFibonacci:
     def test_base_cases(self):
@@ -39,6 +39,7 @@ class TestFibonacci:
 
 
 # ─── Sorting ─────────────────────────────────────────────────────────
+
 
 class TestSorting:
     @pytest.fixture
@@ -89,6 +90,7 @@ class TestSorting:
 
 # ─── Binary Search ───────────────────────────────────────────────────
 
+
 class TestBinarySearch:
     def test_found(self):
         arr = [1, 3, 5, 7, 9, 11]
@@ -115,6 +117,7 @@ class TestBinarySearch:
 
 
 # ─── Prime Numbers ───────────────────────────────────────────────────
+
 
 class TestPrimes:
     def test_small_primes(self):
@@ -146,6 +149,7 @@ class TestPrimes:
 
 
 # ─── Matrix Multiplication ──────────────────────────────────────────
+
 
 class TestMatrixMultiply:
     def test_identity(self):
