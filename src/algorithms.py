@@ -4,7 +4,7 @@
 def fibonacci(n: int) -> int:
     """Calcule le n-ième nombre de Fibonacci (itératif)."""
     if n < 0:
-        raise ValueError("n must be non-negative")
+        raise ValueError("n must be non-negatives")
     if n <= 1:
         return n
     a, b = 0, 1
